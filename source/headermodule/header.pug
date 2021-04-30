@@ -1,6 +1,10 @@
 //- header structure
 nav#header
-    h1#home-link: a(href="/") Salmutterklaus.com
-    h1#kunst-link: a(href="/kunst.html") Kunst 
-    h1#bus-link: a(href="/welt.html") Welt
-    h1#geschichte-link: a(href="/geschichte.html") Geschichte
+    #header-main
+        a(href="/")#home-link.click-button: h1 Salmutterklaus.com
+        #menu-burger.click-button: svg: use(href="#svg-burger-icon")
+        #menu-cross.click-button: svg: use(href="#svg-cross-icon")
+    #header-menu
+        a(href="/kunst.html")#kunst-link.click-button:  h1 Kunst 
+        a(href="/welt.html")#welt-link.click-button: h1 Welt
+        a(href="/geschichte.html")#geschichte-link.click-button: h1 Geschichte

@@ -10,8 +10,23 @@ print = (arg) -> console.log(arg)
 #endregion
 
 ############################################################
-headermodule.initialize = () ->
+headermodule.initialize = ->
     log "headermodule.initialize"
+    menuBurger.addEventListener("click", menuBurgerClicked)
+    menuCross.addEventListener("click", menuCrossClicked)
     return
+
+############################################################
+menuBurgerClicked = ->
+    log "menuBurgerClicked"
+    header.classList.add("expanded")
+    return
+
+menuCrossClicked = ->
+    log "menuCrossClicked"
+    header.classList.remove("expanded")
+    return
+
+
     
 module.exports = headermodule

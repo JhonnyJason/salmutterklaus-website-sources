@@ -1,5 +1,75 @@
 // header styles
+
+/*==========================================================
+Parameters
+==========================================================*/burger-size = 40px
+line-width = 2px
+
+main-elements-padding = (20px - line-width)
+
+menu-sides-offset = 30px
+
+icon-padding = 5px
+
+
+minimal-width-for-full-menu = 700px
+
+/*==========================================================
+Styles
+==========================================================*/
 #header
+    overflow hidden
+    #menu-burger
+        display block
+    #menu-cross
+        display none
+    #header-menu
+        display none
+        transform translateY(58px)
+    h1
+        padding main-elements-padding
+
+#header.expanded
+    #menu-burger
+        display none
+    #menu-cross
+        display block
+    #header-menu
+
+        text-align right
+        display: flex
+        flex-direction: column 
+
+
+#header-main
+    margin 0 menu-sides-offset
     display flex
-    padding 20px
     justify-content: space-between
+    align-items: center
+    svg 
+        width burger-size
+        height burger-size
+
+#header-menu
+    padding-right menu-sides-offset
+    box-sizing: border-box
+    background-color black
+    position absolute
+    top 0
+    right 0
+    h1
+        flex-grow: 1
+.active
+    color black
+    background-color white
+    pointer-events: none
+
+@media screen and (min-width: minimal-width-for-full-menu)
+    #header
+        #header-menu
+            transform translateY(0)
+            display flex
+        #menu-cross
+            display none
+        #menu-burger
+            display none
