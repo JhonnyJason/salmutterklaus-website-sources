@@ -1,12 +1,46 @@
 // footer styles
+footer-icon-size = 40px
+
+
+#footer-top
+    background-color white
+    border-top solid 5px black
+    height 7px
+
 #footer
-    padding 80px 40px 30px 40px
+    padding 40px 40px 70px 40px
     display flex
     justify-content: space-between
 
+#instagram-link
+    display block
+    margin-left auto
+    width footer-icon-size
+    height footer-icon-size
+    svg
+        width footer-icon-size
+        height footer-icon-size
+
 #footer-left
     text-align: left
+    max-width 320px
     h2
         margin-bottom 10px
     p 
         margin-bottom 5px
+
+#footer-right
+    text-align: right
+    h2
+        margin-bottom 30px
+    p 
+        margin-bottom 7px
+
+
+@media screen and (max-width: 550px)
+    #footer
+        flex-direction: column
+    
+    #footer-right
+        margin-top: 60px
+        text-align: center
