@@ -8,6 +8,7 @@
     left 0
     height 100vh
     width 100vw
+    box-sizing: border-box
     background-image: url("/img/artwork-main.jpg")
     background-size: cover
 
@@ -20,30 +21,54 @@
     text-align left
     padding-top 60px
     padding-left 20px
+    box-sizing: border-box
     a:hover
         text-decoration: underline
         cursor: pointer
+    a
+        display block
 
 
-#toppage-heading-klaus
-    font-size 27pt
-    text-shadow 4px 4px 10px black
+.outside-stroke
+    position relative
+    background transparent
+    z-index: 0
+    color black
+
+.outside-stroke:before
+    content: attr(text)
+    position absolute
+    left 0
+    z-index: -1
+    -webkit-text-stroke: 15px white
+
+
 
 #toppage-heading
     margin-bottom 40px
+    
+#toppage-heading-home
+    margin-bottom 14px
+#toppage-heading-klaus
+    font-size 27pt
+    margin-bottom 14px
+#toppage-heading-salmutter
+    font-size 27pt
+
 
 #toppage-main-menu
     font-size 16pt
-    text-shadow 2px 2px 4px black
-    margin-bottom 16px
+    margin-bottom 40px
 
     a
-        margin-right 4px
+        margin-bottom 14px
+
 #toppage-bottom
-    text-shadow 2px 2px 3px black
     font-size 14pt
     a
-        margin-right 3px
+        margin-bottom 14px
+
+
 
 @media (min-aspect-ratio: 1/1)
     #toppage-background
